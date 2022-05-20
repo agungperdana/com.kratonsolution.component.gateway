@@ -3,3 +3,7 @@
 
 # Ignore Gradle build output directory
 build
+.idea
+.vscode
+gateway-service/bin
+gateway-service/build

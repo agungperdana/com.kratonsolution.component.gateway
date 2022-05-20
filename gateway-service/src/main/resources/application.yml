@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: Gateway-Service
+  cloud:
+    gateway:
+      routes:
+        - id: belian-module-access
+          uri: http://127.0.0.1:8081/api/v2/access-module/all
+          predicates:
+            - Path=/access-module/all
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    root: DEBUG
